@@ -127,4 +127,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.setting(locals()) # Activate Django-Heroku.
+django_heroku.settings(locals()) # Activate Django-Heroku.
