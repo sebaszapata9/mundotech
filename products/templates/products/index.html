@@ -1,0 +1,29 @@
+{% load static %}
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Productos</title>
+    <link rel="stylesheet" href="{% static 'products/styles.css' %}">
+</head>
+<body>
+    <a href="{% url 'main:index' %}"><img id="small_logo"  src="{% static 'products/images/logo2.png' %}" alt="Logo de MUNDO TECH"></a>
+    <br>
+    <h1>Productos</h1>
+	    
+    <div class="product_list">
+        {% for phone in phones%}
+		<div class="product_list_item">
+            <span class="product_list_item_title"><p>{{phone.brand}} - {{phone.name}}</p></span>
+            <span class="product_list_item_price"><p>S/{{phone.price}}</p></span>
+            <span class="product_list_item_specs"><p>{{phone.specs}}</p></span>
+            {% if phone.new_release%}
+                <span class="product_list_item_new_release"><p>NUEVO LANZAMIENTO</p></span>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+
+</body>
+</html>

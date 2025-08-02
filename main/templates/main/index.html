@@ -1,0 +1,22 @@
+{% load static %}
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú principal</title>
+    <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+</head>
+<body>
+    <div class="img_principal">
+        <img src="{% static 'main/images/logo2.png' %}" alt="Logo de MUNDO TECH">
+  
+
+    </div>
+            <h1>Bienvenido a MUNDO TECH</h1>
+        <h2>Tu tienda de celulares y accesorios</h2>
+        <h3>Explora nuestros productos y encuentra lo que necesitas</h3>  
+        <br>
+        <a href="{% url 'products:index' %}">Haz clic aquí para ver nuestro catálogo</a>
+    
+</body>
+</html>
